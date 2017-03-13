@@ -5,6 +5,9 @@ var myVideo = document.getElementById("myVideo");
 var curTime = document.getElementById('current-time');
 var durTime = document.getElementById('duration-time');
 var playPauseBtn = document.getElementById('play-pause-button');
+var progressBar = document.getElementById('progress-bar');
+var rangeSlider = document.getElementById('range-slider');
+var frameTime = 1 / 25;
 
 // Wait for the data to be loaded before initialising time
 myVideo.addEventListener('loadeddata', function() {
@@ -12,6 +15,7 @@ myVideo.addEventListener('loadeddata', function() {
 		curTime.innerHTML = formatTime(myVideo.currentTime);
 		durTime.innerHTML = formatTime(myVideo.duration);
 	}
+	setupRangeSlider();
 });
 
 // Add a listener for the timeupdate events so the currentTime can be updated
@@ -28,6 +32,38 @@ myVideo.addEventListener('pause', function() {
 	// Change the button to be a play button
 	changeButtonType(playPauseBtn, 'play');
 }, false);
+
+// Add a listener for the timeupdate event so we can update the progress bar
+myVideo.addEventListener('timeupdate', updateProgressBar, false);
+
+// Update the progress bar
+function updateProgressBar() {
+	// Work out how much of the media has played via the duration and currentTime parameters
+	var percentage = Math.floor((100 / myVideo.duration) * myVideo.currentTime);
+	// Update the progress bar's value
+	progressBar.value = percentage;
+	// Update the progress bar's text (for browsers that don't support the progress element)
+	progressBar.innerHTML = percentage + '% played';
+}
+
+// Setup the range slider
+function setupRangeSlider(){
+	rangeSlider.min = myVideo.currentTime;
+	rangeSlider.max = myVideo.duration;
+	rangeSlider.value = myVideo.currentTime;
+}
+
+myVideo.addEventListener('timeupdate', updateRangeSlider, false);
+
+function updateRangeSlider(){
+	rangeSlider.value = myVideo.currentTime;
+}
+
+rangeSlider.addEventListener('change',function(){
+	myVideo.currentTime = rangeSlider.value;
+},false);
+
+
 
 function changeButtonType(btn, value) {
 	btn.title = value;
@@ -49,6 +85,7 @@ function togglePlayPause() {
 		changeButtonType(playPauseBtn, 'play');
 		// Pause the media
 		myVideo.pause();
+		console.log(myVideo.currentTime);
 	}
 }
 

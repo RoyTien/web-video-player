@@ -15,6 +15,12 @@
 		<source src="123.mp4" type="video/mp4">
 	</video>
 	<br>
+	<div>
+		<progress id='progress-bar' width="320" min='0' max='100' value='0'>0% played</progress>
+
+		<input id="range-slider" type="range" step="1" /> 
+
+	</div>
 	<button id='play-pause-button' class='play' title='play' onclick='togglePlayPause()' type="button">Play</button>
 	<button id='stop-button' class='stop' title='stop' onclick='stopPlayer();'>Stop</button>
 	<span id='current-time'></span>/<span id='duration-time'></span>
