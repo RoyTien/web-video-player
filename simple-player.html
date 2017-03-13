@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Untitled</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="author" href="humans.txt">
+
+</head>
+<body>    
+<div>
+	<video id="myVideo" width="320" height="176" controls="">
+		<source src="123.mp4" type="video/mp4">
+	</video>
+	<br>
+	<button id='play-pause-button' class='play' title='play' onclick='togglePlayPause()' type="button">Play</button>
+	<button id='stop-button' class='stop' title='stop' onclick='stopPlayer();'>Stop</button>
+	<span id='current-time'></span>/<span id='duration-time'></span>
+
+</div>
+    
+
+<script src="simple-player.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>

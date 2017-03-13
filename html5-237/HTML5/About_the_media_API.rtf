@@ -1,0 +1,106 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1038\cocoasubrtf360
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\froman\fcharset0 TimesNewRomanPSMT;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue255;}
+{\info
+{\title In his article in issue 237 of }
+{\author Ian Devlin}}\paperw11900\paperh16840\margl1440\margr1440\vieww11900\viewh16840\viewkind1
+\deftab720
+\pard\pardeftab720\ri-6\sl276\slmult1\sa200
+
+\f0\fs22 \cf0 In his article in issue 237 of .net magazine, Ian Devlin explores how to use the HTML5 media API to build a custom video player with a UI that remains consistent no matter which browser it is viewed in. If you\'92re unfamiliar with the API, the following brief run-down of some of its key attributes, events and methods may help you when working through the tutorial.\
+If you want to look at the complete listing of what's available, then check out the W3C HTML5 Specification: \cf2 \ul \ulc2 http://www.w3.org/TR/html5/media-elements.html#media-element
+\f1 \cf0 \ulnone \
+\
+\pard\pardeftab720\ri-6\sl276\slmult1\sa200
+
+\f0\i\b \cf0 Media Element Attributes\
+\pard\pardeftab720\ri-6\sl276\slmult1\sa200
+
+\i0\b0 \cf0 There are a number of attributes that apply to both the audio and video elements that can be accessed via the API. When the values of some of these attributes are changed, they cause media API events to be raised. Some of the more useful attributes are as follows:\
+\pard\pardeftab720\ri-6\sl276\slmult1\sa200
+
+\b \cf0 controls
+\b0  - Boolean attribute that informs the browser whether to display its default control set or not\
+
+\b volume
+\b0  - Contains the volume setting for the media object where 0 is the lowest value and 1.0 is highest (changing causes the volumechanged event to be raised)\
+
+\b muted
+\b0  - Boolean attribute that indicates whether the media is muted or not (changing causes the volumechanged event to be raised)
+\f1 \
+
+\f0\b src
+\b0  - Contains the URL of the media source that's currently playing\
+
+\b loop
+\b0  - Boolean attribute that indicates whether the media is set to loop or not\
+
+\b currentTime
+\b0  - The current time in seconds of the media that has been played (changing causes the timeupdate and sometimes the ended events to be raised)
+\f1 \
+
+\f0\b duration
+\b0  - The overall length of the media that is to be played\
+\pard\pardeftab720\ri-6\sl276\slmult1\sa200
+
+\f1\i\b \cf0 \
+\pard\pardeftab720\ri-6\sl276\slmult1\sa200
+
+\f0 \cf0 Media Element Methods
+\f1 \
+\pard\pardeftab720\ri-6\sl276\slmult1\sa200
+
+\f0\i0\b0 \cf0 In order to get the media to actually do something, there are a number of methods that we can call on the media object to manipulate it. Some of these methods cause specific media API events to be raised. The more common and useful methods are:\
+\pard\pardeftab720\ri-6\sl276\slmult1\sa200
+
+\b \cf0 load()
+\b0  - Causes the media object to be reset to its default values (causes the loadstart event to be raised)
+\f1 \
+
+\f0\b play()
+\b0  - Informs the media object to begin playback (causes the play event to be raised)
+\f1 \
+
+\f0\b pause()
+\b0  - Causes the playback of the media object to be suspended (causes the paused event to be raised)
+\f1 \
+
+\f0\b canPlayType()
+\b0  - Performs a check to see if a browser is capable of playing a particular MIME type, e.g. 'audio/mp3',' video/mp4'. Returns either an empty string (can't play this type), 'maybe' (unable to say for certain) or 'probably' (the browser probably can play this type)
+\f1 \
+\pard\pardeftab720\ri-6\sl276\slmult1\sa200
+
+\i\b \cf0 \
+\pard\pardeftab720\ri-6\sl276\slmult1\sa200
+
+\f0 \cf0 Media Element Events\
+\pard\pardeftab720\ri-6\sl276\slmult1\sa200
+
+\i0\b0 \cf0 A number of events can be raised based on value changes, method calls and browser actions. Again the most common and useful events are listed below:\
+\pard\pardeftab720\ri-6\sl276\slmult1\sa200
+
+\b \cf0 loadedmetadata
+\b0  - This is raised when the browser has finished obtaining the media object data that it needs\
+
+\b playing
+\b0  - This is raised when playback of a media object has begun\
+
+\b ended
+\b0  - This is raised when playback of a media object has finished\
+
+\b durationchange
+\b0  - This is raised when the duration attribute of the media object has been updated\
+
+\b timeupdate
+\b0  - This is raised when the playback position of the media object has changed during normal playback
+\f1 \
+
+\f0\b pause
+\b0  - This is raised when a media object is paused
+\f1 \
+
+\f0\b volumechange
+\b0  - This is raised when the volume or muted attributes are changed\
+This is not an exhaustive list of the attributes, methods and events that are part of the media API, but they're sufficient to for us to be able to build a media player. 
+\f1 \
+}
