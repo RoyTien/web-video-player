@@ -7,7 +7,25 @@ var durTime = document.getElementById('duration-time');
 var playPauseBtn = document.getElementById('play-pause-button');
 var progressBar = document.getElementById('progress-bar');
 var rangeSlider = document.getElementById('range-slider');
+
+var previousFrame = document.getElementById('previous-frame');
+var nextFrame = document.getElementById('next-frame');
 var frameTime = 1 / 25;
+
+
+previousFrame.addEventListener('click',function(){
+	myVideo.pause();
+	if(myVideo.currentTime > 0){
+		myVideo.currentTime = myVideo.currentTime - frameTime;
+	}
+},false);
+
+nextFrame.addEventListener('click',function(){
+	myVideo.pause();
+	if(myVideo.currentTime < myVideo.duration){
+		myVideo.currentTime = myVideo.currentTime + frameTime;
+	}
+},false);
 
 // Wait for the data to be loaded before initialising time
 myVideo.addEventListener('loadeddata', function() {
@@ -28,6 +46,7 @@ myVideo.addEventListener('play', function() {
 	// Change the button to be a pause button
 	changeButtonType(playPauseBtn, 'pause');
 }, false);
+
 myVideo.addEventListener('pause', function() {
 	// Change the button to be a play button
 	changeButtonType(playPauseBtn, 'play');
@@ -59,10 +78,10 @@ function updateRangeSlider(){
 	rangeSlider.value = myVideo.currentTime;
 }
 
+
 rangeSlider.addEventListener('change',function(){
 	myVideo.currentTime = rangeSlider.value;
 },false);
-
 
 
 function changeButtonType(btn, value) {
@@ -88,6 +107,7 @@ function togglePlayPause() {
 		console.log(myVideo.currentTime);
 	}
 }
+
 
 // Stop the current media from playing, and return it to the start position
 function stopPlayer() {
