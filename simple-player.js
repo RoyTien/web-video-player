@@ -95,12 +95,15 @@ function stopPlayer() {
 	myVideo.currentTime = 0;
 }
 
-// Covert the time from seconds to mm:ss
-function formatTime(seconds) {
-	var minutes = Math.floor(seconds / 60);
+// Covert the time from seconds to mm:ss:ms
+function formatTime(initiationTime) {
+
+	var hours = Math.floor(initiationTime / 3600);
+	hours = (hours >= 10) ? hours : "0" + hours;
+	var minutes = (Math.floor((initiationTime / 60) % 60));
 	minutes = (minutes >= 10) ? minutes : "0" + minutes;
-	var seconds = Math.floor(seconds % 60);
+	var seconds = Math.floor(initiationTime) % 60;
 	seconds = (seconds >= 10) ? seconds : "0" + seconds;
-	return minutes + ":" + seconds;
+	return hours + ":" + minutes + ":" + seconds;
 }
 
