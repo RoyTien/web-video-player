@@ -12,7 +12,6 @@ var previousFrame = document.getElementById('previous-frame');
 var nextFrame = document.getElementById('next-frame');
 var frameTime = 1 / 25;
 
-
 previousFrame.addEventListener('click',function(){
 	myVideo.pause();
 	if(myVideo.currentTime > 0){
@@ -126,4 +125,3 @@ function formatTime(initiationTime) {
 	seconds = (seconds >= 10) ? seconds : "0" + seconds;
 	return hours + ":" + minutes + ":" + seconds;
 }
-

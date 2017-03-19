@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Untitled</title>
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
+    <!-- <link rel="author" href="humans.txt"> -->
+    <script src="jquery.min.js"></script>
+
+</head>
+<body>
+        
+	<video id="myVideo" width="320" height="176" controls="">
+		<source src="123.mp4" type="video/mp4">
+	</video>
+
+	<br>
+
+	<div>
+		<progress id='progress-bar' width="320" min='0' max='100' value='0'>0% played</progress>
+
+		<input id="range-slider" type="range" step="1" /> 
+	</div>
+
+	<button id='play-pause-button' class='play' title='play' type="button">Play</button>
+	<button id='stop-button' class='stop' title='stop'>Stop</button>
+	<span id='current-time'></span>/<span id='duration-time'></span>
+	<br>
+	<button id="previous-frame" title="previous frame" type="button"><|Frame</button>
+	<button id="next-frame" title="next frame" type="button">Frame|></button>
+	<button id="start-end-segment-button" type="button" value="StartSegment">Start Segment</button>
+	<button id="add-chapter" type="button" disabled="true">Add chapter</button>
+
+
+
+
+	
+
+	<!-- Many users already have downloaded jQuery from Google or Microsoft when visiting another site. As a result, it will be loaded from cache when they visit your site, which leads to faster loading time. Also, most CDN's will make sure that once a user requests a file from it, it will be served from the server closest to them, which also leads to faster loading time. -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> -->
+    <script src="simple-player-jq.js"></script>
+</body>
+</html>
