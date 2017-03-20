@@ -37,7 +37,7 @@
 	<button id="startEndSegmentButton" type="button">Start Segment</button>
 	<button id="addChapter" type="button" disabled="true">Add chapter</button>
 
-	<button id="submitButton" type="button">Submit</button>
+	<button id="submitButton" type="button" disabled="true">Submit</button>
 
 
 
@@ -55,10 +55,10 @@
 					
 					<label for="startTime">Start</label>
 					<input id="startTime" name="startTime" size="10" />
-					<label for="EndTime">End</label>
-					<input id="EndTime" name="EndTime" size="10" />
+					<label for="endTime">End</label>
+					<input id="EndTime" name="endTime" size="10" />
 					<br><br>
-					<textarea <textarea rows="6" cols="50"></textarea>
+					<textarea <textarea rows="6" cols="50" name="segmentDescription"></textarea>
 					<br><br>
 				</div>
 				<!-- 
@@ -85,9 +85,9 @@
 		</div>
 	</template>
 
-	<div id="segmentList">
+	<form id="segmentListForm">
 		
-	</div>
+	</form>
 
 	<!-- Many users already have downloaded jQuery from Google or Microsoft when visiting another site. As a result, it will be loaded from cache when they visit your site, which leads to faster loading time. Also, most CDN's will make sure that once a user requests a file from it, it will be served from the server closest to them, which also leads to faster loading time. -->
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> -->

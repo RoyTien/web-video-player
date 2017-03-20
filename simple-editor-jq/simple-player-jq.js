@@ -30,7 +30,7 @@ $('#range-slider').change(function(event) {
 });
 
 
-$('#myVideo').on({
+$('#myVideo').bind({
 	//
 	'loadeddata': function(event) {
 		event.preventDefault();
@@ -43,22 +43,22 @@ $('#myVideo').on({
 	},
 	// Update Current TIme
 	"timeupdate": function(){
-		$curTime.innerHTML = formatTime($myVid.currentTime);
-	},
 
-	"timeupdate": function(){
+		// Update Current Time
+		$curTime.innerHTML = formatTime($myVid.currentTime);
+
+		// Update Progress Bar
+
 		// Work out how much of the media has played via the duration and currentTime parameters
 		var percentage = Math.floor((100 / $myVid.duration) * $myVid.currentTime);
 		// Update the progress bar's value
 		$progressBar.value = percentage;
 		// Update the progress bar's text (for browsers that don't support the progress element)
 		$progressBar.innerHTML = percentage + '% played';
-	},
 
-	// Update Range Slider
-	'timeupdate': function(){
+		// Update Range Slider
 		$rangeSlider.value = $myVid.currentTime;
-	}
+	},
 
 });
 
