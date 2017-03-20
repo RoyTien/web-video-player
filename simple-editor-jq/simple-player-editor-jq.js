@@ -36,6 +36,9 @@ $('#addChapter').click(function(event) {
 	var $chapterTemplate = $('#chapterTemplate')[0];
 	var $lastChapterInfoList = $lastSegment.getElementsByClassName("chapter-info-list")[0];
 	$lastChapterInfoList.appendChild($chapterTemplate.content.cloneNode(true));
+
+	var $lastChapter = $lastChapterInfoList.lastElementChild;
+	$lastChapter.getElementsByTagName('INPUT')[1].value = formatTime($myVid.currentTime);
 });
 
 function addStartTimeIntoSegment(){
@@ -48,6 +51,15 @@ function addEndTimeIntoSegment(){
 	let $lastSegment = $('#segmentListForm').children().last()[0];
 	let startTime = $lastSegment.getElementsByTagName('INPUT')[2];
 	startTime.value = formatTime($myVid.currentTime);
+}
+
+function addTimePieceIntoChapter(){
+	let $lastSegment = $('#segmentListForm').children().last()[0];
+	let $lastChapter = $lastSegment.getElementsByClassName("chapter-info-list");
+
+	console.log($lastChapter.last());
+	// var $lastChapterInfoList = $lastSegment.getElementsByClassName("chapter-info-list")[0];
+
 }
 // $(".flip").click(function(event) {
 // 	console.log($(this));
