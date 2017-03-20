@@ -3,7 +3,7 @@ $(document).ready(function(){
 
 var $startEndSegBtn = $('#startEndSegmentButton')[0];
 var $addChapter = $('#addChapter');
-
+var $submitBtn = $('#submitButton')[0];
 
 
 $('#startEndSegmentButton').click(function(event) {
@@ -13,10 +13,12 @@ $('#startEndSegmentButton').click(function(event) {
 		var $segmentTemplate = $('#segmentTemplate').html();
 		$('#segmentList').append($segmentTemplate);
 		addChapter.disabled = false;
+		$submitBtn.disabled = true;
 		$(this).text('End Segment');
 
 	}else{
 		addChapter.disabled = true;
+		$submitBtn.disabled = false;
 		$(this).text('Start Segment');
 	}
 });
@@ -27,9 +29,6 @@ $('#addChapter').click(function(event) {
 	var $chapterTemplate = $('#chapterTemplate')[0];
 	var $lastChapterInfoList = $lastSegment.getElementsByClassName("chapter-info-list")[0];
 	$lastChapterInfoList.appendChild($chapterTemplate.content.cloneNode(true));
-
-	console.log($lastChapterInfoList);
-	console.log($chapterTemplate);
 });
 
 
