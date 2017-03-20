@@ -16,3 +16,9 @@
     border: solid 1px #c3c3c3;
     border-top: none;
 }
+
+.chapter{
+	margin: 10px;
+	padding: 5px;
+    background-color: #F0E68C;
+}

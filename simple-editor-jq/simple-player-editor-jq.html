@@ -49,20 +49,24 @@
 			<div class="panel">
 				<div id="segmentInfo" class="segment-info">
 					<label for="segmentTitle">Segment Title</label>
-					<input type="text" name="segmentTitle" id="segmentTitle"><br>
+					<input type="text" name="segmentTitle" id="segmentTitle"><br><br>
 					
-					<fieldset>
-						<legend>Time Interval</legend>
-						<label for="startTime">Start</label>
-						<input id="startTime" name="startTime" size="10" />
-						<label for="EndTime">End</label>
-						<input id="EndTime" name="EndTime" size="10" />
-					</fieldset>
-					<br>
+					<label for="startTime">Start</label>
+					<input id="startTime" name="startTime" size="10" />
+					<label for="EndTime">End</label>
+					<input id="EndTime" name="EndTime" size="10" />
+					<br><br>
 					<textarea <textarea rows="6" cols="50"></textarea>
+					<br><br>
 				</div>
+				<!-- 
 				<div id="chapterInfoList" class="chapter-info-list">
-				</div>
+				</div> 
+				-->
+				<fieldset id="chapterInfoList" class="chapter-info-list">
+					<legend>Chapters</legend>
+
+				</fieldset>
 			</div>
 		</div>
 	</template>
@@ -70,11 +74,12 @@
 	<template id="chapterTemplate">
 		<div id="chapter" class="chapter">
 			<label for="chapterTitle">Chapter Title</label>
-			<input type="text" name="chapterTitle" id="chapterTitle"><br>
+			<input type="text" name="chapterTitle" id="chapterTitle"><br><br>
 			<label for="startTime">Start</label>
 			<input id="startTime" name="startTime" size="10" />
 			<label for="EndTime">End</label>
 			<input id="EndTime" name="EndTime" size="10" />
+			<br>
 		</div>
 	</template>
 
