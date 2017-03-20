@@ -116,7 +116,6 @@ function stopPlayer() {
 
 // Covert the time from seconds to mm:ss:ms
 function formatTime(initiationTime) {
-
 	var hours = Math.floor(initiationTime / 3600);
 	hours = (hours >= 10) ? hours : "0" + hours;
 	var minutes = (Math.floor((initiationTime / 60) % 60));

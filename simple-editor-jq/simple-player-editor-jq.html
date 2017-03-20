@@ -5,10 +5,14 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Untitled</title>
-    <!-- <link rel="stylesheet" href="css/style.css"> -->
+    <link rel="stylesheet" href="simple-player-editor-jq.css">
     <!-- <link rel="author" href="humans.txt"> -->
     <script src="jquery.min.js"></script>
 
+
+ <style>
+
+</style>
 </head>
 <body>
         
@@ -30,16 +34,57 @@
 	<br>
 	<button id="previous-frame" title="previous frame" type="button"><|Frame</button>
 	<button id="next-frame" title="next frame" type="button">Frame|></button>
-	<button id="start-end-segment-button" type="button" value="StartSegment">Start Segment</button>
-	<button id="add-chapter" type="button" disabled="true">Add chapter</button>
+	<button id="startEndSegmentButton" type="button">Start Segment</button>
+	<button id="addChapter" type="button" disabled="true">Add chapter</button>
 
 
 
 
-	
+
+	<template id="segmentTemplate">
+		<div id="segmentDiv">
+			<div id="segment" class="flip">
+				Segment
+			</div>
+			<div class="panel">
+				<div id="segmentInfo" class="segment-info">
+					<label for="segmentTitle">Segment Title</label>
+					<input type="text" name="segmentTitle" id="segmentTitle"><br>
+					
+					<fieldset>
+						<legend>Time Interval</legend>
+						<label for="startTime">Start</label>
+						<input id="startTime" name="startTime" size="10" />
+						<label for="EndTime">End</label>
+						<input id="EndTime" name="EndTime" size="10" />
+					</fieldset>
+					<br>
+					<textarea <textarea rows="6" cols="50"></textarea>
+				</div>
+				<div id="chapterInfoList" class="chapter-info-list">
+				</div>
+			</div>
+		</div>
+	</template>
+
+	<template id="chapterTemplate">
+		<div id="chapter" class="chapter">
+			<label for="chapterTitle">Chapter Title</label>
+			<input type="text" name="chapterTitle" id="chapterTitle"><br>
+			<label for="startTime">Start</label>
+			<input id="startTime" name="startTime" size="10" />
+			<label for="EndTime">End</label>
+			<input id="EndTime" name="EndTime" size="10" />
+		</div>
+	</template>
+
+	<div id="segmentList">
+		
+	</div>
 
 	<!-- Many users already have downloaded jQuery from Google or Microsoft when visiting another site. As a result, it will be loaded from cache when they visit your site, which leads to faster loading time. Also, most CDN's will make sure that once a user requests a file from it, it will be served from the server closest to them, which also leads to faster loading time. -->
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> -->
     <script src="simple-player-jq.js"></script>
+    <script src="simple-player-editor-jq.js"></script>
 </body>
 </html>

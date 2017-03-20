@@ -1,0 +1,18 @@
+
+ #segmentDiv{
+ 	margin: 10px;
+    background-color: #6495ED;
+ }
+
+.flip {
+    padding: 5px;
+    background-color: #e5eecc;
+    border: solid 1px #c3c3c3;
+}
+
+.panel {
+    padding: 5px;
+    background-color: #F0FFFF;
+    border: solid 1px #c3c3c3;
+    border-top: none;
+}
