@@ -1,0 +1,282 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Start Process</title>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+
+<!-- <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script> -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+
+<!-- <link rel=stylesheet href="./start-process/start-process.css"> -->
+
+<link rel=stylesheet href="start-process-container.css">
+
+</head>
+
+<body>
+<div id="containerSection" class="row container-section text-center container-padding">
+
+  <!-- Navigation Section -->
+  <div id="navSection" class="my-col col-md-1 nav-section nopadding hidden" style="border: 1px solid pink">
+
+
+
+    <!-- Stage Buttons Group -->
+    <table class="my-table" style="width: 100%; border: 1px solid black"><tbody><tr><td>
+      <a id="cateStageBtn" href="#" class="btn btn-primary stage-button active" role="button">Category</a>
+      <br><br>
+      <a id="tempStageBtn" href="#" class="btn btn-primary stage-button disabled" role="button" aria-disabled="true">Template</a>
+      <br><br>
+      <a id="colorStageBtn" href="#" class="btn btn-primary stage-button disabled" role="button" aria-disabled="true">Color</a>
+      <br><br>
+      <a id="featStageBtn" href="#" class="btn btn-primary stage-button disabled" role="button" aria-disabled="true">Feature</a>
+      <br><br>
+      <a id="saveStageBtn" href="#" class="btn btn-primary stage-button disabled" role="button" aria-disabled="true">Save</a>
+      <br><br>
+
+      <!-- <button id="cateStageBtn" type="button" class="btn btn-secondary stage-button">Category</button> -->
+      <!-- <button id="tempStageBtn" type="button" class="btn btn-secondary stage-button">Template</button> -->
+      <!-- <button id="colorStageBtn" type="button" class="btn btn-secondary stage-button">Color</button> -->
+      <!-- <button id="featStageBtn" type="button" class="btn btn-secondary stage-button">Feature</button> -->
+      <!-- <button id="saveStageBtn" type="button" class="btn btn-secondary stage-button">Save</button> -->
+    </td></tr></tbody></table>
+
+
+
+  </div>
+  <!-- Main Section Container -->
+
+  <div class="my-col col-md-11 main-section nopadding" style="border: 1px solid black">
+
+    <!-- Category Section -->
+    <div id="cateSection" class="main-section hidden nopadding">
+      <div id="cateHeader" class="row header-section nopadding" style="border: 1px solid red">
+        <div class="my-col" style="border: 1px solid yellow">
+          <table class="my-table" style="width: 100%; border: 1px solid black"><tbody><tr><td>
+            <label for="appName">App Name : </label>
+            <input id="cateAppName" type="text" style="width:35%" name="appName" placeholder="Please input your app name">
+          </td></tr></tbody></table>
+        </div>
+      </div>
+      <div id="cateCarousel" class="row carousel-section nopadding" style="border: 1px solid blue">
+        <div class="my-col" style="border: 1px solid green">
+          <div id="cateCarouselSection" class="carousel-div">
+
+<!-- Bootstrap Carousel Component -->
+<div id="carouselCateIndicators" class="carousel slide carousel-div" data-ride="carousel" data-interval="false">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselCateIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselCateIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselCateIndicators" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner carousel-div" role="listbox" >
+    <div class="carousel-item active carousel-div">
+      <img class="d-block img-fluid carousel-img" src="./images/1.png" alt="First slide">
+    </div>
+    <div class="carousel-item carousel-div">
+      <img class="d-block img-fluid carousel-img" src="./images/2.png" alt="Second slide">
+    </div>
+    <div class="carousel-item carousel-div">
+      <img class="d-block img-fluid carousel-img" src="./images/3.png" alt="Third slide">
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselCateIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselCateIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div id="cateControl" class="row control-section nopadding" style="border: 1px solid red">
+        <div class="my-col" style="border: 1px solid blue">
+          Categoty Control Panels
+        </div>
+      </div>
+      <div class="row next-btn-section nopadding" style="border: 1px solid green">
+        <div class="my-col" style="border: 1px solid yellow">
+          <table class="my-table" style="width: 100%; border: 1px solid black"><tbody><tr><td>
+            <button id="cateNextBtn" type="button" class="btn btn-success" style="width:35%" disabled aria-disabled="true">Input App Name and Choose Category</button>
+          </td></tr></tbody></table>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+    <!-- Template Section -->
+    <div id="tempSection" class="main-section hidden">
+      <div id="tempHeader" class="row header-section nopadding" style="border: 1px solid red">
+        <div class="my-col" style="border: 1px solid yellow">
+          <table class="my-table" style="width: 100%; border: 1px solid black"><tbody><tr><td>
+            Template
+          </td></tr></tbody></table>
+        </div>
+      </div>
+      <div id="tempCarousel" class="row carousel-section nopadding" style="border: 1px solid blue">
+        <div class="my-col" style="border: 1px solid green">
+          <div id="tempCarouselSection"></div>
+        </div>
+      </div>
+      <div id="tempControl" class="row control-section nopadding" style="border: 1px solid red">
+        <div class="my-col" style="border: 1px solid blue">
+          Template Control Panels
+        </div>
+      </div>
+      <div id="tempNextBtn" class="row next-btn-section nopadding" style="border: 1px solid green">
+        <div class="my-col" style="border: 1px solid yellow">
+          <table class="my-table" style="width: 100%; border: 1px solid black"><tbody><tr><td>
+            <button type="button" class="btn btn-secondary">Next</button>
+          </td></tr></tbody></table>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+    <!-- Color Scheme -->
+    <div id="colorSection" class="main-section hidden">
+      <div id="colorHeader" class="row header-section nopadding" style="border: 1px solid red">
+        <div class="my-col" style="border: 1px solid yellow">
+          <table class="my-table" style="width: 100%; border: 1px solid black"><tbody><tr><td>
+            Color
+          </td></tr></tbody></table>
+        </div>
+      </div>
+      <div id="colorCarousel" class="row carousel-section nopadding" style="border: 1px solid blue">
+        <div class="my-col" style="border: 1px solid green">
+          <div id="colorCarouselSection"></div>
+        </div>
+      </div>
+      <div id="colorControl" class="row control-section nopadding" style="border: 1px solid red">
+        <div class="my-col" style="border: 1px solid blue">
+          Color Control Panels
+        </div>
+      </div>
+      <div id="colorNextBtn" class="row next-btn-section nopadding" style="border: 1px solid green">
+        <div class="my-col" style="border: 1px solid yellow">
+          <table class="my-table" style="width: 100%; border: 1px solid black"><tbody><tr><td>
+            <button type="button" class="btn btn-secondary">Next</button>
+          </td></tr></tbody></table>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+    <!-- Feature Section -->
+    <div id="featSection" class="main-section hidden">
+      <div id="featHeader" class="row header-section nopadding" style="border: 1px solid red">
+        <div class="my-col" style="border: 1px solid yellow">
+          <table class="my-table" style="width: 100%; border: 1px solid black"><tbody><tr><td>
+            Feature
+          </td></tr></tbody></table>
+        </div>
+      </div>
+      <div id="featCarousel" class="row carousel-section nopadding" style="border: 1px solid blue">
+        <div class="my-col" style="border: 1px solid green">
+          <div id="featCarouselSection"></div>
+        </div>
+      </div>
+      <div id="featControl" class="row control-section nopadding" style="border: 1px solid red">
+        <div class="my-col" style="border: 1px solid blue">
+          Feature Control Panels
+        </div>
+      </div>
+      <div id="featNextBtn" class="row next-btn-section nopadding" style="border: 1px solid green">
+        <div class="my-col" style="border: 1px solid yellow">
+          <table class="my-table" style="width: 100%; border: 1px solid black"><tbody><tr><td>
+            <button type="button" class="btn btn-secondary">Next</button>
+          </td></tr></tbody></table>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+    <!-- Save Section -->
+    <div id="saveSection" class="main-section hidden">
+      <div id="saveHeader" class="row header-section nopadding" style="border: 1px solid red">
+        <div class="my-col" style="border: 1px solid yellow">
+          <table class="my-table" style="width: 100%; border: 1px solid black"><tbody><tr><td>
+            Save
+          </td></tr></tbody></table>
+        </div>
+      </div>
+      <div id="saveCarousel" class="row carousel-section nopadding" style="border: 1px solid blue">
+        <div class="my-col" style="border: 1px solid green">
+          <div id="saveCarouselSection"></div>
+        </div>
+      </div>
+      <div id="saveControl" class="row control-section nopadding" style="border: 1px solid red">
+        <div class="my-col" style="border: 1px solid blue">
+          Save Control Panels
+        </div>
+      </div>
+      <div id="saveNextBtn" class="row next-btn-section nopadding" style="border: 1px solid green">
+        <div class="my-col" style="border: 1px solid yellow">
+          <table class="my-table" style="width: 100%; border: 1px solid black"><tbody><tr><td>
+            <button type="button" class="btn btn-secondary">Next</button>
+          </td></tr></tbody></table>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+  </div>
+</div>
+
+<!-- <script src="./start-process/start-process.js"></script> -->
+<script src="start-process.js"></script>
+<script>
+
+
+
+$( document ).ready(function() {
+
+
+
+
+
+
+
+
+
+});
+
+</script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+html, body, .container {
+    height:100%;
+}
+
+.row {
+    height: 100%;
+    display: table-row;
+}
+
+.col-md-1{
+  background-color: red;
+}
+
+.vcenter {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+}
+
+.panel-heading h3 {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: normal;
+    width: 75%;
+    padding-top: 8px;
+}
+
+.dropdown-menu {
+  left: 50%;
+  right: auto;
+  text-align: center;
+  transform: translate(-50%, 0);
+}
+
+.btn{
+  border:0px solid transparent; /* this was 1px earlier */
+}
+
+.carousel-inner img {
+  margin: auto;
+}
+
+.carousel-indicators li {
+  background-color: #999;
+  background-color: rgba(70,70,70,.25);
+}
+
+.carousel-indicators .active {
+  background-color: #444;
+}
