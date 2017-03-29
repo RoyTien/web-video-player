@@ -76,7 +76,9 @@ html, body{
 }
 
 .stage-button{
-	width: 100%;
+	width: 90%;
+	display: block;
+	margin: auto;
 }
 
 .hidden{

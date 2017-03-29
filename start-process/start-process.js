@@ -101,23 +101,60 @@ $('#cateAppName').on("change paste keyup",function(){
 	}
 });
 
-$("#cateNextBtn").click(function() {
 
+
+/*
+ * Category Selection Buttons Bind With Category Carousel
+ */
+var carouselCateIndicators = $('#carouselCateIndicators');
+
+$('#cateBtnFitness').on('click', function() {
+	carouselCateIndicators.carousel(0);
+});
+
+$('#cateBtnYoga').on('click', function() {
+	carouselCateIndicators.carousel(1);
+});
+
+$('#cateBtnSport').on('click', function() {
+	carouselCateIndicators.carousel(2);
+});
+
+$('#cateBtnEducation').on('click', function() {
+	carouselCateIndicators.carousel(3);
+});
+
+
+/*
+ * Template Selection Buttons Bind With Template Carousel
+ */
+var carouselTempIndicators = $('#carouselTempIndicators');
+ 
+$('#tempBtnGridView').on('click', function() {
+	carouselTempIndicators.carousel(0);
+});
+
+$('#tempBtnListView').on('click', function() {
+	carouselTempIndicators.carousel(1);
+});
+
+
+/*
+ * Next Buttons Click Functions
+*/
+$("#cateNextBtn").click(function() {
 	$( "#tempStageBtn" ).trigger( "click" );
 });
 
 $("#tempNextBtn").click(function() {
-
 	$( "#colorStageBtn" ).trigger( "click" );
 });
 
 $("#colorNextBtn").click(function() {
-
 	$( "#featStageBtn" ).trigger( "click" );
 });
 
 $("#featNextBtn").click(function() {
-
 	$( "#saveStageBtn" ).trigger( "click" );
 });
 
