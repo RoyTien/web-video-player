@@ -2,14 +2,33 @@
 
 $( document ).ready(function() {
 
-/*
- * Fade In Navitaion Bar and Category Section at the begining.
- * Add Class{'active-section'} to '#cateSection'
- */
-$('#cateSection').fadeIn("slow");
-$('#cateSection').addClass('active-section');
-$('#navSection').fadeIn("slow");
 
+
+//For Testing, enable all Navivation Buttons
+$('.stage-button').removeClass('disabled');
+
+$(function () {
+	/*
+	 * Fade In Navitaion Bar and Category Section at the begining.
+	 * Add Class{'active-section'} to '#cateSection'
+	 */
+	$('#cateSection').fadeIn("slow");
+	$('#cateSection').addClass('active-section');
+	$('#navSection').fadeIn("slow");
+
+
+	//
+	// // Disable Rest Navivahttp://api.jquery.com/attr/#attr-attributeName-valuetion Buttons
+	// $('.stage-button').addClass('disabled');
+	// $('.stage-button').prop('aria-disabled', true);
+	// $('.stage-button').attr({ tabindex: '-1' });
+	
+	// // Release Category Navigation Button
+	// $('#cateStageBtn').removeClass('disabled');
+	// $('#cateStageBtn').prop('aria-disabled', false);
+	// $('#cateStageBtn').attr({ tabindex: '0' });
+
+});
 
 $('.stage-button').click(function() {
 	if($(this).hasClass('active')){
@@ -59,13 +78,26 @@ $('#cateAppName').on("change paste keyup",function(){
 			$("#cateNextBtn").fadeOut('slow',function() {
 				$(this).text("Next").fadeIn('slow');
 			});
+
+			$('#tempStageBtn').removeClass('disabled');
 		}
 	}else{
 		$("#cateNextBtn").fadeOut('slow',function() {
 			$(this).text("Input App Name and Choose Category").fadeIn('slow');
 		});
+
+		// Disable Next Button
 		$('#cateNextBtn').prop('disabled', true);
 
+		// Disable Rest Navivahttp://api.jquery.com/attr/#attr-attributeName-valuetion Buttons
+		$('.stage-button').addClass('disabled');
+		$('.stage-button').prop('aria-disabled', true);
+		$('.stage-button').attr({ tabindex: '-1' });
+		
+		// Release Category Navigation Button
+		$('#cateStageBtn').removeClass('disabled');
+		$('#cateStageBtn').prop('aria-disabled', false);
+		$('#cateStageBtn').attr({ tabindex: '0' });
 	}
 });
 
@@ -73,6 +105,22 @@ $("#cateNextBtn").click(function() {
 
 	$( "#tempStageBtn" ).trigger( "click" );
 });
+
+$("#tempNextBtn").click(function() {
+
+	$( "#colorStageBtn" ).trigger( "click" );
+});
+
+$("#colorNextBtn").click(function() {
+
+	$( "#featStageBtn" ).trigger( "click" );
+});
+
+$("#featNextBtn").click(function() {
+
+	$( "#saveStageBtn" ).trigger( "click" );
+});
+
 
 
 });
