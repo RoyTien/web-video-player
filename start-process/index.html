@@ -26,10 +26,28 @@
 </head>
 
 <body>
-<div id="containerSection" class="row container-section text-center container-padding">
+
+<a data-toggle="modal" class="btn btn-info" data-target="#myModal">Click me !</a>
+
+
+
+
+<div class="modal fade container-section nopadding" id="myModal">
+<div class="modal-dialog modal-xl modal-section" style="padding: 0px !important;">
+<div class="modal-content nopadding main-section" >
+<div class="modal-body nopadding main-section">
+
+
+
+
+
+
+
+<div id="containerSection" class="row main-section text-center nopadding">
+
 
   <!-- Navigation Section -->
-  <div id="navSection" class="my-col col-md-1 nav-section nopadding hidden w3-light-grey" style="">
+  <div id="navSection" class="my-col col-md-1 nav-section nopadding hidden w3-light-grey section-radius">
 
 
 
@@ -44,7 +62,6 @@
       <a id="featStageBtn" href="#" class="btn btn-outline-primary stage-button" role="button">Feature</a>
       <br>
       <a id="saveStageBtn" href="#" class="btn btn-outline-primary stage-button" role="button">Save</a>
-      <br>
 
       <!-- <button id="cateStageBtn" type="button" class="btn btn-secondary stage-button">Category</button> -->
       <!-- <button id="tempStageBtn" type="button" class="btn btn-secondary stage-button">Template</button> -->
@@ -61,7 +78,7 @@
   <div class="my-col col-md-11 main-section nopadding" style="">
 
     <!-- Category Section -->
-    <div id="cateSection" class="main-section hidden nopadding w3-pale-yellow">
+    <div id="cateSection" class="main-section hidden nopadding w3-pale-yellow section-radius">
       <div id="cateHeader" class="row header-section nopadding" style="">
         <div class="my-col" style="">
           <table class="my-table" style="width: 100%;"><tbody><tr><td>
@@ -114,10 +131,10 @@
 
 
 <!-- Category Selection Section -->
-<div id="cateSelectionSection" class="row my-col text-center nopadding" style="">
+<div id="cateSelectionSection" class="row my-col text-center nopadding" style="border-radius:5px;">
   <div class="col-1"></div>
   <div class="col my-col">
-    <table class="my-table"><tbody><tr><td>
+    <table class="my-table"><tbody><tr><td class="align-middle">
       <button id="cateBtnFitness" type="button" class="btn btn-primary active">Fitness</button>
     </td></tr></tbody></table>
   </div>
@@ -157,8 +174,8 @@
 
 
     <!-- Template Section -->
-    <div id="tempSection" class="main-section hidden w3-pale-red">
-      <div id="tempHeader" class="row header-section nopadding" style="">
+    <div id="tempSection" class="main-section hidden w3-pale-red section-radius">
+      <div id="tempHeader" class="row header-section nopadding" >
         <div class="my-col" style="">
           <table class="my-table" style="width: 100%; "><tbody><tr><td>
             Template
@@ -207,7 +224,7 @@
 
 
 <!-- Template Selection Section -->
-<div id="tempSelectionSection" class="row my-col text-center nopadding" style="">
+<div id="tempSelectionSection" class="row my-col text-center nopadding">
   <div class="col-2"></div>
   <div class="col my-col">
     <table class="my-table"><tbody><tr><td>
@@ -242,8 +259,8 @@
 
 
 
-    <!-- Color Scheme -->
-    <div id="colorSection" class="main-section hidden w3-pale-green">
+    <!-- Color Scheme Section -->
+    <div id="colorSection" class="main-section hidden w3-pale-green section-radius" >
       <div id="colorHeader" class="row header-section nopadding" style="">
         <div class="my-col" style="">
           <table class="my-table" style="width: 100%; "><tbody><tr><td>
@@ -276,7 +293,7 @@
 
 
     <!-- Feature Section -->
-    <div id="featSection" class="main-section hidden w3-light-blue">
+    <div id="featSection" class="main-section hidden w3-light-blue section-radius">
       <div id="featHeader" class="row header-section nopadding" style="">
         <div class="my-col" style="">
           <table class="my-table" style="width: 100%; "><tbody><tr><td>
@@ -308,7 +325,7 @@
 
 
     <!-- Save Section -->
-    <div id="saveSection" class="main-section hidden w3-khaki">
+    <div id="saveSection" class="main-section hidden w3-khaki section-radius">
       <div id="saveHeader" class="row header-section nopadding" style="">
         <div class="my-col" style="">
           <table class="my-table" style="width: 100%; "><tbody><tr><td>
@@ -345,8 +362,15 @@
   </div>
 </div>
 
+
+<!-- For Modal -->
+</div>
+</div>
+</div>
+</div>
+
 <!-- <script src="./start-process/start-process.js"></script> -->
-<script src="start-process.js"></script>
+<script src="start-process-index.js"></script>
 <script>
 
 
